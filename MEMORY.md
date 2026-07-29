@@ -23,7 +23,7 @@
 - [x] Browsers: Chromium primary.
 - [x] Headless: yes in CI, headed locally.
 - [x] Verifier: subagents for code, human for strategy.
-- [x] PDFs: human writes final versions in Notion; AI provides Markdown drafts.
+- [x] Deliverables: Markdown in `docs/`; human owns final wording.
 - [x] Accessibility test target: login modal; test detects and reports real WCAG violations.
 - [x] Negative/edge case: invalid login credentials.
 - [x] README location: root.
@@ -35,6 +35,6 @@
 - [x] Defect reports published as GitHub issues #1 and #2.
 - [x] CI workflow passed in GitHub Actions after configuring secrets.
 - [x] Test coverage expanded to 16 passing tests (7 API + 9 UI): auth, update/delete booking, invalid payload (DEF-002), logout, catalog filter, cart add/remove, empty login, cart a11y scan.
-- [x] Markdown draft for AI usage log: `docs/ai-usage-log.md` (1-page PDF target).
-- [x] Optional walkthrough script: `docs/walkthrough.md` (Deliverable 5).
-- [ ] Human exports final PDFs in Notion: strategy (≤4 pages), scenarios, AI usage log (≤1 page).
+- [x] AI usage log: `docs/ai-usage-log.md`.
+- [x] Optional walkthrough: Loom link in README (Deliverable 5).
+- [x] Deliverables stay as Markdown in the GitHub repo.

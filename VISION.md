@@ -12,7 +12,7 @@ The challenge is complete when all five deliverables are present, runnable, and 
 
 ### Deliverable 1 — QA automation strategy
 
-- File: `docs/qa-automation-strategy.pdf` (max 4 pages).
+- File: `docs/qa-automation-strategy.md` (max 4 pages when printed).
 - A decision document written for Meridian's CTO, not a textbook chapter.
 - Covers the seven required points: risk map, tooling, framework architecture, coverage strategy,
   test data and environments, CI/CD and quality gates, roadmap and handover.
@@ -38,21 +38,21 @@ The challenge is complete when all five deliverables are present, runnable, and 
 
 ### Deliverable 3 — AI usage log
 
-- File: `docs/ai-usage-log.pdf` (max 1 page).
+- File: `docs/ai-usage-log.md` (max 1 page when printed).
 - Honest account of how AI was used.
 - Includes what was delegated, what was kept human, tools used, at least one case where AI output
   was wrong or misleading, how verification was done, and what was not delegated on principle.
 
 ### Deliverable 4 — Two written scenarios
 
-- File: `docs/scenarios.pdf` (max 400 words each).
+- File: `docs/scenarios.md` (max 400 words each).
 - Scenario 1: the shared staging environment conflict.
 - Scenario 2: the testability discussion with a senior engineer.
 
 ### Deliverable 5 — Optional walkthrough
 
 - Not required.
-- A script/guidance may be prepared if time allows.
+- Recorded Loom demo linked from the README.
 
 ## Quality standards
 

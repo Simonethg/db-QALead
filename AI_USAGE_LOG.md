@@ -17,7 +17,7 @@ Closed-loop multi-agent setup (see `AGENTS.md` and `docs/ai-usage-log.md`):
 - Design of agent roles, loop methodology, and context files (`VISION.md`, `ARCHITECTURE.md`, `RULES.md`, `MEMORY.md`).
 - Drafting of strategy, scenarios, defect reports, README, and this log.
 - Drafting of the submission-ready `docs/ai-usage-log.md`.
-- Drafting of optional walkthrough (`docs/walkthrough.md`, Deliverable 5).
+- Drafting of optional walkthrough notes (Deliverable 5; recorded Loom linked from README).
 
 ## What was kept human
 
@@ -26,7 +26,7 @@ Closed-loop multi-agent setup (see `AGENTS.md` and `docs/ai-usage-log.md`):
 - Decision on API target (RESTful Booker), package manager (npm), browsers (Chromium), headless mode, and verifier approach.
 - Addition of SOC 2 Type II, ISTQB, and ADA/WCAG compliance as explicit constraints.
 - Decision to create Demoblaze account with temporary email during setup.
-- Decision to write final PDFs in Notion; AI provides Markdown drafts.
+- Decision to keep deliverables as Markdown in `docs/` (no external doc tool).
 - Scope expanded to document found defects in `docs/defects/` as examples of QA defect reporting and triage.
 - Code and documentation pushed to `https://github.com/Simonethg/db-QALead` with explicit user approval; `.env` was excluded from the commit.
 - GitHub secrets `DEMOBLAZE_USERNAME` and `DEMOBLAZE_PASSWORD` added via `gh secret set` after user granted `gh` access.
@@ -44,7 +44,7 @@ Closed-loop multi-agent setup (see `AGENTS.md` and `docs/ai-usage-log.md`):
 
 ## Cases where AI output was corrected or incomplete
 
-- Initial `FetchURL` to the Notion job posting returned only JavaScript shell; user provided the text directly.
+- Initial `FetchURL` to the job posting returned only JavaScript shell; user provided the text directly.
 - Initial `FetchURL` to the referenced X/Twitter post returned only the login page; user provided the article text directly.
 
 ## Principles not delegated

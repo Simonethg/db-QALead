@@ -9,7 +9,7 @@ It demonstrates a Playwright + TypeScript automation framework against [Demoblaz
 ```
 db-QALead/
 ├── .github/workflows/test.yml    # CI workflow
-├── docs/                         # Strategy, scenarios, AI usage log, walkthrough, defect reports
+├── docs/                         # Strategy, scenarios, AI usage log, defect reports
 ├── src/
 │   ├── config/                   # Environment configuration
 │   ├── fixtures/                 # Test data and Playwright fixtures
@@ -131,7 +131,9 @@ Invalid login is covered because authentication is a high-risk control: a wrong 
 
 ## Optional walkthrough
 
-A speaking script for an 8–10 minute live or recorded demo is in `docs/walkthrough.md` (Deliverable 5). It covers strategy, architecture, running the 16-test suite (or CI evidence), AI usage boundaries, scenarios, and a day-of checklist.
+**Recorded demo (Deliverable 5):** [Loom walkthrough](https://www.loom.com/share/2b79ae7e64f24b2db1a7f11ac59755e9)
+
+The video covers the README, strategy, CI/PR approach, scenarios, defect reports, UI/API structure, and AI usage.
 
 ## Design decisions
 
@@ -156,7 +158,7 @@ The GitHub Actions workflow (`test.yml`) runs on every push and pull request to 
 2. **UI tests** — run the UI suite in headless Chromium, uploading the report on failure.
 3. **API tests** — run the API suite independently.
 
-Release blockers and override rules for Meridian are described in the strategy document (`docs/qa-automation-strategy.pdf`).
+Release blockers and override rules for Meridian are described in the strategy document (`docs/qa-automation-strategy.md`).
 
 ## Defect reports
 
