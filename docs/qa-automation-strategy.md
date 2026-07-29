@@ -153,6 +153,34 @@ The author applies the label based on a short risk checklist: touches billing/pa
 
 **Handover to engineering.** The framework uses the same language and tools as the product team. Page objects, fixtures, and helpers are documented. A 90-minute walkthrough and a "first test" pairing session are scheduled for each team. By day 90, the engineering teams open and maintain their own tests, and QA acts as a quality coach.
 
+## Investment and resourcing
+
+**Environment options (monthly estimate)**
+
+| Option | Cost | Trade-off |
+|--------|------|-----------|
+| Shared staging (current) | $0 | Demo and test data collide; nightly runs are brittle. |
+| Isolated tenants/namespaces in existing staging | $200–$500 | Removes most collisions; uses existing infra. |
+| Dedicated QA environment | $1,000–$3,000 | Full isolation and on-demand billing runs; highest confidence. |
+
+**Tooling (annual estimate)**
+
+| Tool | Cost | Notes |
+|------|------|-------|
+| Playwright + TypeScript | $0 | Open source; only CI runner cost. |
+| GitHub Actions | $0–$600 | Depends on parallel minutes; likely within free/team tier initially. |
+| Greptile | $2,400–$4,800 | ~$20–$40 per engineer/month for automated review confidence. |
+| axe-core | $0 | Open source accessibility scanning. |
+| Allure / ReportPortal (optional) | $0–$1,200 | Self-hosted is free; SaaS pricing if preferred. |
+
+**Team**
+
+- **Month 0–6:** One Lead QA Automation Engineer (founding role) to build the framework, establish gates, and train the team.
+- **Month 6–12:** Add one QA Automation Engineer as coverage grows and engineering takes over day-to-day maintenance.
+- **Month 12+:** QA function shifts to strategy, risk assessment, and audit readiness; engineering owns test maintenance.
+
+Total first-year investment is modest compared to the cost of one incorrect invoice or a SOC 2 finding. The priority is to fund the dedicated QA environment and the founding role; tooling costs are secondary.
+
 ---
 
 This strategy prioritizes the areas that already hurt Meridian, builds transferable skills in the engineering team, and produces the evidence and traceability required for SOC 2 Type II.
