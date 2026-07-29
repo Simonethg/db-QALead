@@ -29,11 +29,11 @@ The six-month QA environment stays on the roadmap, but the nightly run becomes t
 
 I reply in the PR thread, addressing the senior engineer and the CTO together.
 
-> I agree the export logic itself is well covered by unit tests, and I do not want to weaken that. The gap I see is not in the algorithm; it is in the integration path that a real tenant experiences. Right now we cannot verify end-to-end that the export file is generated with the correct data, lands in the UI, and can be downloaded. That is the path where our last invoice defect escaped.
+> I agree the export logic is well covered by unit tests. The gap is the integration path a real tenant experiences. We cannot verify end-to-end that the export file is generated with correct data and can be downloaded. That is where our last invoice defect escaped.
 >
-> The hooks I am asking for are not "for QA" in the sense of test-only scaffolding. They are observable, controllable interfaces that make the system more maintainable for everyone: an admin endpoint to trigger the billing job for one tenant, stable selectors on the export table, and a seed endpoint to put a tenant into the required state. These are standard production engineering practices, not QA special cases.
+> The hooks are not test-only scaffolding. They are observable interfaces that make the system more maintainable: an admin endpoint to trigger the billing job for one tenant, stable selectors on the export table, and a seed endpoint to put a tenant into the required state. These are standard production engineering practices, not QA special cases.
 >
-> Testing only through the UI without these interfaces would mean our automated suite runs at the mercy of the global billing schedule and brittle CSS paths. That makes the test slow, flaky, and unable to tell us whether a failure is in the export or in the surrounding UI. I would rather have a fast, reliable integration test that uses the same production code paths.
+> Testing only through the UI without these interfaces leaves our suite at the mercy of the global billing schedule and brittle CSS paths. That makes the test slow, flaky, and unable to tell us whether a failure is in the export or in the surrounding UI. I prefer a fast, reliable integration test using the same production code paths.
 
 **What I actually ask for.**
 
