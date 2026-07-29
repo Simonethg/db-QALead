@@ -9,7 +9,7 @@ It demonstrates a Playwright + TypeScript automation framework against [Demoblaz
 ```
 db-QALead/
 ├── .github/workflows/test.yml    # CI workflow
-├── docs/                         # Strategy, scenarios, AI usage log, walkthrough, defect reports
+├── docs/                         # Strategy, scenarios, AI usage log, defect reports
 ├── src/
 │   ├── config/                   # Environment configuration
 │   ├── fixtures/                 # Test data and Playwright fixtures
@@ -133,7 +133,7 @@ Invalid login is covered because authentication is a high-risk control: a wrong 
 
 **Recorded demo (Deliverable 5):** [Loom walkthrough](https://www.loom.com/share/2b79ae7e64f24b2db1a7f11ac59755e9)
 
-Notes and links for the recording are in `docs/walkthrough.md`. The video covers the README, strategy, CI/PR approach, scenarios, defect reports, UI/API structure, and AI usage.
+The video covers the README, strategy, CI/PR approach, scenarios, defect reports, UI/API structure, and AI usage.
 
 ## Design decisions
 

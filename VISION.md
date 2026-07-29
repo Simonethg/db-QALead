@@ -52,7 +52,7 @@ The challenge is complete when all five deliverables are present, runnable, and 
 ### Deliverable 5 — Optional walkthrough
 
 - Not required.
-- Recorded Loom demo linked from the README and `docs/walkthrough.md`.
+- Recorded Loom demo linked from the README.
 
 ## Quality standards
 

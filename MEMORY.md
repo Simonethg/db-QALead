@@ -36,5 +36,5 @@
 - [x] CI workflow passed in GitHub Actions after configuring secrets.
 - [x] Test coverage expanded to 16 passing tests (7 API + 9 UI): auth, update/delete booking, invalid payload (DEF-002), logout, catalog filter, cart add/remove, empty login, cart a11y scan.
 - [x] AI usage log: `docs/ai-usage-log.md`.
-- [x] Optional walkthrough: Loom + `docs/walkthrough.md` (Deliverable 5).
+- [x] Optional walkthrough: Loom link in README (Deliverable 5).
 - [x] Deliverables stay as Markdown in the GitHub repo.

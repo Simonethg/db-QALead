@@ -17,7 +17,7 @@ Closed-loop multi-agent setup (see `AGENTS.md` and `docs/ai-usage-log.md`):
 - Design of agent roles, loop methodology, and context files (`VISION.md`, `ARCHITECTURE.md`, `RULES.md`, `MEMORY.md`).
 - Drafting of strategy, scenarios, defect reports, README, and this log.
 - Drafting of the submission-ready `docs/ai-usage-log.md`.
-- Drafting of optional walkthrough (`docs/walkthrough.md`, Deliverable 5).
+- Drafting of optional walkthrough notes (Deliverable 5; recorded Loom linked from README).
 
 ## What was kept human
 

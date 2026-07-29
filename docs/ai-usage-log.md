@@ -22,7 +22,7 @@ Supporting tools: `pdftotext`, GitHub CLI, Playwright HTML report, axe-core, and
 
 - Repository inspection and extraction of the challenge brief from PDF.
 - Scaffolding of the Playwright + TypeScript project (page objects, fixtures, helpers, CI, lint/typeconfig).
-- Drafting of strategy, scenarios, defect reports, README, walkthrough, and this log in Markdown.
+- Drafting of strategy, scenarios, defect reports, README, and this log in Markdown.
 - Iterative debugging from command output (module resolution, types, navigation, accessibility assertions, API status codes).
 - Independent Verifier review of the suite against `VISION.md`.
 
