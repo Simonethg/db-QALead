@@ -122,8 +122,11 @@ npm run typecheck     # TypeScript type check
 
 ### API tests
 
+- `health.spec.ts` — `GET /ping` health check (`201 Created`).
 - `auth.spec.ts` — authentication happy path (token issued) and invalid credentials.
-- `booking.spec.ts` — create/retrieve, update, delete-then-404, missing resource 404, and invalid payload (documents DEF-002 / HTTP 500).
+- `authorization.spec.ts` — unauthenticated PUT/DELETE return `403`; update via HTTP Basic Auth.
+- `booking-query.spec.ts` — list booking IDs and filter by `firstname`.
+- `booking.spec.ts` — create/retrieve, PUT update, PATCH partial update, delete-then-404, missing resource 404, and invalid payload (documents DEF-002 / HTTP 500).
 
 ### Negative and edge cases (justification)
 
@@ -131,7 +134,7 @@ Invalid login is covered because authentication is a high-risk control: a wrong 
 
 ## Optional walkthrough
 
-A speaking script for an 8–10 minute live or recorded demo is in `docs/walkthrough.md` (Deliverable 5). It covers strategy, architecture, running the 16-test suite (or CI evidence), AI usage boundaries, scenarios, and a day-of checklist.
+A speaking script for an 8–10 minute live or recorded demo is in `docs/walkthrough.md` (Deliverable 5). It covers strategy, architecture, running the suite (or CI evidence), AI usage boundaries, scenarios, and a day-of checklist.
 
 ## Design decisions
 

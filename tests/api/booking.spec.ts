@@ -65,4 +65,27 @@ test.describe('RESTful Booker API — bookings', () => {
     // expect(result.status).toBe(400);
     expect(result.status).toBe(500);
   });
+
+  test('should partially update a booking with PATCH', async ({ apiClient }) => {
+    const created = await apiClient.createBooking(
+      createValidBooking({ firstname: 'BeforePatch', additionalneeds: 'Breakfast' })
+    );
+
+    try {
+      const patched = await apiClient.patchBooking(created.bookingid, {
+        firstname: 'AfterPatch',
+      });
+
+      expect(patched.firstname).toBe('AfterPatch');
+      // Unchanged fields must remain intact on a partial update.
+      expect(patched.lastname).toBe('Automation');
+      expect(patched.additionalneeds).toBe('Breakfast');
+
+      const retrieved = await apiClient.getBooking(created.bookingid);
+      expect(retrieved.firstname).toBe('AfterPatch');
+      expect(retrieved.lastname).toBe('Automation');
+    } finally {
+      await apiClient.deleteBooking(created.bookingid);
+    }
+  });
 });

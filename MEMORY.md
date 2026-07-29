@@ -27,7 +27,7 @@
 - [x] Accessibility test target: login modal; test detects and reports real WCAG violations.
 - [x] Negative/edge case: invalid login credentials.
 - [x] README location: root.
-- [x] All 16 tests pass locally (lint, typecheck, format check also pass).
+- [x] All 23 tests pass locally (lint, typecheck, format check also pass).
 - [x] Independent Verifier review completed; package-lock.json unignored and committed, CI trace upload fixed.
 - [x] package-lock.json present and not ignored; workflow uses `npm ci`.
 - [x] Project pushed to GitHub.
@@ -37,4 +37,5 @@
 - [x] Test coverage expanded to 16 passing tests (7 API + 9 UI): auth, update/delete booking, invalid payload (DEF-002), logout, catalog filter, cart add/remove, empty login, cart a11y scan.
 - [x] Markdown draft for AI usage log: `docs/ai-usage-log.md` (1-page PDF target).
 - [x] Optional walkthrough script: `docs/walkthrough.md` (Deliverable 5).
+- [x] API coverage expanded with ping, booking list/filter, PATCH, unauthenticated 403, and Basic Auth update (14 API + 9 UI = 23 tests).
 - [ ] Human exports final PDFs in Notion: strategy (≤4 pages), scenarios, AI usage log (≤1 page).
