@@ -1,5 +1,7 @@
 # QA Automation Lead — Technical Challenge
 
+https://www.loom.com/share/2b79ae7e64f24b2db1a7f11ac59755e9
+
 This repository contains the working automation project for the Lead QA Automation Engineer role at Dualboot Partners.
 
 It demonstrates a Playwright + TypeScript automation framework against [Demoblaze](https://www.demoblaze.com) for UI tests and [RESTful Booker](https://restful-booker.herokuapp.com) for API tests. The project is designed with maintainability, traceability, and SOC 2 / ISTQB / ADA-aligned quality practices in mind.
