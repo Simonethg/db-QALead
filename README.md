@@ -158,7 +158,7 @@ The GitHub Actions workflow (`test.yml`) runs on every push and pull request to 
 2. **UI tests** — run the UI suite in headless Chromium, uploading the report on failure.
 3. **API tests** — run the API suite independently.
 
-Release blockers and override rules for Meridian are described in the strategy document (`docs/qa-automation-strategy.pdf`).
+Release blockers and override rules for Meridian are described in the strategy document (`docs/qa-automation-strategy.md`).
 
 ## Defect reports
 

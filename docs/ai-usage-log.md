@@ -33,11 +33,11 @@ Supporting tools: `pdftotext`, GitHub CLI, Playwright HTML report, axe-core, and
 - Target choices: Demoblaze + RESTful Booker, npm, Chromium, headless in CI.
 - Credential handling via `.env` and GitHub secrets — never committed.
 - Approval of git push, secrets, and defect issues #1 and #2.
-- Final PDF export in Notion from Markdown drafts.
+- Final wording of deliverable Markdown in `docs/` (strategy, scenarios, AI usage log).
 
 ## Where AI was wrong or incomplete
 
-- Fetching the Notion job posting and a referenced article returned empty shells or login pages; the human pasted the source text.
+- Fetching the job posting and a referenced article returned empty shells or login pages; the human pasted the source text.
 - First runs failed for scaffold gaps: UI specs skipped base URL navigation; missing `OrderDetails` type; Demoblaze login modal had real WCAG violations; RESTful Booker returned **500** for an invalid payload where **400** was assumed. Each issue was fixed from real output before claiming green.
 - The Independent Verifier found `package-lock.json` ignored and traces missing from CI artifacts; both were corrected.
 
