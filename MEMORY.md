@@ -27,7 +27,7 @@
 - [x] Accessibility test target: login modal; test detects and reports real WCAG violations.
 - [x] Negative/edge case: invalid login credentials.
 - [x] README location: root.
-- [x] All 6 tests pass locally (lint, typecheck, format check also pass).
+- [x] All 16 tests pass locally (lint, typecheck, format check also pass).
 - [x] Independent Verifier review completed; package-lock.json unignored and committed, CI trace upload fixed.
 - [x] package-lock.json present and not ignored; workflow uses `npm ci`.
 - [x] Project pushed to GitHub.
