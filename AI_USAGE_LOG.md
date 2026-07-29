@@ -12,6 +12,7 @@ Closed-loop multi-agent setup (see `AGENTS.md` and `docs/ai-usage-log.md`):
 
 ## What was delegated to AI
 
+- Install and activate Cursor skill `i-have-adhd` from `ayghri/i-have-adhd` (project skills + always-on `.cursor/rules`).
 - Repository inspection and cloning.
 - Extraction of text from the challenge PDF.
 - Design of agent roles, loop methodology, and context files (`VISION.md`, `ARCHITECTURE.md`, `RULES.md`, `MEMORY.md`).
