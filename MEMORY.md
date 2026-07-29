@@ -1,12 +1,12 @@
 # MEMORY.md — Project Memory
 
-## PROBADO
+## TESTED
 
 - Repository `https://github.com/Simonethg/db-QALead` cloned successfully.
 - Repo is initially empty except for placeholder `README.md` and an AL/Dynamics `.gitignore`.
 - Challenge brief extracted from PDF: 5 deliverables, Playwright + TypeScript preferred, Demoblaze target.
 
-## VERIFICADO
+## VERIFIED
 
 - Deliverables must be in English.
 - No committed credentials; use `.env.example` and environment variables.
@@ -15,7 +15,7 @@
 - Submission must demonstrate awareness of SOC 2 Type II evidence/traceability, ISTQB-aligned practices,
   and ADA/WCAG accessibility compliance.
 
-## ABIERTO
+## OPEN
 
 - [x] Target API: RESTful Booker.
 - [x] Demoblaze account: create during setup with temporary email.

@@ -169,7 +169,7 @@ The author applies the label based on a short risk checklist: touches billing/pa
 |------|------|-------|
 | Playwright + TypeScript | $0 | Open source; only CI runner cost. |
 | GitHub Actions | $0–$600 | Depends on parallel minutes; likely within free/team tier initially. |
-| Greptile | $2,400–$4,800 | ~$20–$40 per engineer/month for automated review confidence. |
+| Greptile | $1,440–$2,160 | Licensed per developer who submits code (~$10–$15 per engineer/month), not per whole team. Based on 12 engineers.
 | axe-core | $0 | Open source accessibility scanning. |
 | Allure / ReportPortal (optional) | $0–$1,200 | Self-hosted is free; SaaS pricing if preferred. |
 
