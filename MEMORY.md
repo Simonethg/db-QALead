@@ -30,4 +30,6 @@
 - [x] All 6 tests pass locally (lint, typecheck, format check also pass).
 - [x] Independent Verifier review completed; package-lock.json unignored and committed, CI trace upload fixed.
 - [x] package-lock.json present and not ignored; workflow uses `npm ci`.
-- [x] Project pushed to GitHub; user must add `DEMOBLAZE_USERNAME` and `DEMOBLAZE_PASSWORD` secrets for CI.
+- [x] Project pushed to GitHub.
+- [x] GitHub secrets `DEMOBLAZE_USERNAME` and `DEMOBLAZE_PASSWORD` configured.
+- [x] Defect reports published as GitHub issues #1 and #2.
