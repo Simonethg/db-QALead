@@ -18,6 +18,7 @@ Closed-loop multi-agent setup (see `AGENTS.md` and `docs/ai-usage-log.md`):
 - Drafting of strategy, scenarios, defect reports, README, and this log.
 - Drafting of the submission-ready `docs/ai-usage-log.md`.
 - Drafting of optional walkthrough (`docs/walkthrough.md`, Deliverable 5).
+- Drafting of test run report template (`docs/templates/test-run-report.md`).
 
 ## What was kept human
 

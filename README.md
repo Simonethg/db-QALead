@@ -10,6 +10,8 @@ It demonstrates a Playwright + TypeScript automation framework against [Demoblaz
 db-QALead/
 ├── .github/workflows/test.yml    # CI workflow
 ├── docs/                         # Strategy, scenarios, AI usage log, walkthrough, defect reports
+│   ├── templates/                # Test run report template (+ filled example)
+│   └── reports/                  # Filled test run reports (date-trigger-sha)
 ├── src/
 │   ├── config/                   # Environment configuration
 │   ├── fixtures/                 # Test data and Playwright fixtures
