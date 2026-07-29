@@ -173,6 +173,8 @@ The author applies the label based on a short risk checklist: touches billing/pa
 | axe-core | $0 | Open source accessibility scanning. |
 | Allure / ReportPortal (optional) | $0–$1,200 | Self-hosted is free; SaaS pricing if preferred. |
 
+**Greptile ROI note.** The cost is only high if measured in isolation. At ~2 PRs per engineer per week and 20 minutes of review per PR, the team spends roughly 8 hours per week on code review. If Greptile's first-pass automation and confidence score cut that by 30% (by catching style issues, missing tests, and common anti-patterns before a human opens the PR), the team saves ~2.5 hours per week, or ~120 hours per year. At a loaded senior-engineer cost of $100/hour, that is ~$12,000 of review capacity recovered for a $1,500–$2,200 tool cost. The bigger benefit is time-to-merge: low-risk PRs no longer sit in a queue waiting for a senior reviewer.
+
 **Team**
 
 - **Month 0–6:** One Lead QA Automation Engineer (founding role) to build the framework, establish gates, and train the team.
