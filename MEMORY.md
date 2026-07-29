@@ -34,3 +34,6 @@
 - [x] GitHub secrets `DEMOBLAZE_USERNAME` and `DEMOBLAZE_PASSWORD` configured.
 - [x] Defect reports published as GitHub issues #1 and #2.
 - [x] CI workflow passed in GitHub Actions after configuring secrets.
+- [x] Markdown draft for AI usage log: `docs/ai-usage-log.md` (1-page PDF target).
+- [x] Optional walkthrough script: `docs/walkthrough.md`.
+- [ ] Human exports final PDFs in Notion: strategy (≤4 pages), scenarios, AI usage log (≤1 page).
