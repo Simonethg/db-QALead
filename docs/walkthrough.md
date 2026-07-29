@@ -30,7 +30,7 @@ Use this as a speaking outline, not a slide deck. Prefer a live demo; fall back 
 Point at the five deliverables in the README / `docs/`:
 
 1. Strategy brief  
-2. Working automation project (16 tests)  
+2. Working automation project (UI + API suite)  
 3. AI usage log  
 4. Two written scenarios  
 5. This walkthrough  

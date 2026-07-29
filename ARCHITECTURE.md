@@ -44,7 +44,10 @@ db-QALead/
 │   │   ├── purchase.spec.ts
 │   │   └── accessibility.spec.ts
 │   └── api/
+│       ├── health.spec.ts
 │       ├── auth.spec.ts
+│       ├── authorization.spec.ts
+│       ├── booking-query.spec.ts
 │       └── booking.spec.ts
 ├── .env.example
 ├── .gitignore
