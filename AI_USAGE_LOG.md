@@ -22,6 +22,7 @@
 - Decision to create Demoblaze account with temporary email during setup.
 - Decision to write final PDFs in Notion; AI provides Markdown drafts.
 - Scope expanded to document found defects in `docs/defects/` as examples of QA defect reporting and triage.
+- Code and documentation pushed to `https://github.com/Simonethg/db-QALead` with explicit user approval; `.env` was excluded from the commit.
 
 ## Verification performed
 
