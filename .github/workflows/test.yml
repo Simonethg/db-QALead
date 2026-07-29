@@ -1,0 +1,110 @@
+name: QA Automation Suite
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    # Nightly smoke run at 06:00 UTC
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  quality-gates:
+    name: Lint, format, and type check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run ESLint
+        run: npm run lint
+
+      - name: Check formatting
+        run: npm run format:check
+
+      - name: Run TypeScript type check
+        run: npm run typecheck
+
+  ui-tests:
+    name: UI end-to-end tests
+    needs: quality-gates
+    runs-on: ubuntu-latest
+    env:
+      CI: true
+      NODE_ENV: staging
+      DEMOBLAZE_USERNAME: ${{ secrets.DEMOBLAZE_USERNAME }}
+      DEMOBLAZE_PASSWORD: ${{ secrets.DEMOBLAZE_PASSWORD }}
+      RESTFUL_BOOKER_BASE_URL: https://restful-booker.herokuapp.com
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Run UI tests
+        run: npx playwright test tests/ui
+
+      - name: Upload Playwright report
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: ui-playwright-report
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 14
+
+  api-tests:
+    name: API tests
+    needs: quality-gates
+    runs-on: ubuntu-latest
+    env:
+      CI: true
+      NODE_ENV: staging
+      RESTFUL_BOOKER_BASE_URL: https://restful-booker.herokuapp.com
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run API tests
+        run: npx playwright test tests/api
+
+      - name: Upload Playwright report
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: api-playwright-report
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 14
