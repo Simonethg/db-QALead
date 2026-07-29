@@ -4,19 +4,29 @@
 **Author:** Candidate  
 **Date:** July 2026
 
-## Tools used
+## Multi-agent setup (Loop Engineering)
 
-Kimi Code / Cursor agents as Executor (implementation), Technical Investigator (API and DOM unknowns), and Independent Verifier (rubric checks). Supporting tools: `pdftotext`, GitHub CLI, Playwright HTML report, axe-core, and GitHub Actions logs.
+Work ran as a closed loop (discover → plan → execute → verify → memorize) with five roles:
+
+| Agent | Who | What they do |
+|-------|-----|--------------|
+| **Product Owner / Strategy Lead** | Human | Approves scope, trade-offs, omissions, and final deliverables; resolves ambiguity. |
+| **Executor** | Kimi Code (main) | Builds code, drafts documents, runs commands, iterates on failures. |
+| **Technical Investigator** | Kimi Code (subagent) | Resolves unknowns: API behavior, DOM selectors, tool versions — read-only unless told otherwise. |
+| **Independent Verifier** | Kimi Code (subagent) or human | Checks deliverables against `VISION.md` rubrics without being the producer. |
+| **Memory Keeper** | Executor role | Maintains `MEMORY.md`, the decision log, and this AI usage log. |
+
+Supporting tools: `pdftotext`, GitHub CLI, Playwright HTML report, axe-core, and GitHub Actions logs.
 
 ## What was delegated to AI
 
 - Repository inspection and extraction of the challenge brief from PDF.
 - Scaffolding of the Playwright + TypeScript project (page objects, fixtures, helpers, CI, lint/typeconfig).
-- Drafting of strategy, scenarios, defect reports, README, and this log in Markdown.
+- Drafting of strategy, scenarios, defect reports, README, walkthrough, and this log in Markdown.
 - Iterative debugging from command output (module resolution, types, navigation, accessibility assertions, API status codes).
 - Independent Verifier review of the suite against `VISION.md`.
 
-## What remained human
+## What remained human (Product Owner)
 
 - Scope, trade-offs, and final wording of the strategy and written scenarios.
 - Compliance framing (SOC 2 Type II, ISTQB, ADA/WCAG).
@@ -37,4 +47,4 @@ Local gates: `npm run lint`, `typecheck`, `format:check`, and `npm test` (6 test
 
 ## Principles not delegated
 
-Final judgment on strategy and scenarios; no credentials in the repo; no git mutations without approval during the build; accessibility findings reported as product evidence, not silenced for a green suite.
+Final judgment on strategy and scenarios; no credentials in the repo; no git mutations without Product Owner approval during the build; accessibility findings reported as product evidence, not silenced for a green suite.

@@ -2,9 +2,13 @@
 
 ## Tools and agents used
 
-- **Executor:** Kimi Code main agent (this conversation).
-- **Technical Investigator:** Kimi Code subagent (planned for unknowns like API behavior or DOM selectors).
-- **Independent Verifier:** Kimi Code subagent or human (planned for rubric checks).
+Closed-loop multi-agent setup (see `AGENTS.md` and `docs/ai-usage-log.md`):
+
+- **Product Owner / Strategy Lead (Human):** Approves scope, trade-offs, omissions, and final deliverables.
+- **Executor (Kimi Code main):** Builds code, drafts documents, runs commands, iterates.
+- **Technical Investigator (Kimi Code subagent):** Resolves unknowns — API behavior, DOM selectors, tool versions.
+- **Independent Verifier (Kimi Code subagent or human):** Checks deliverables against rubrics without being the producer.
+- **Memory Keeper (Executor role):** Maintains `MEMORY.md`, decision log, and `AI_USAGE_LOG.md`.
 
 ## What was delegated to AI
 
