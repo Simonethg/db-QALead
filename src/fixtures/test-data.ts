@@ -1,4 +1,4 @@
-import type { UserCredentials, OrderDetails } from '../types';
+import type { UserCredentials, OrderDetails, BookingPayload } from '../types';
 
 export const testUsers = {
   valid: {
@@ -8,6 +8,10 @@ export const testUsers = {
   invalid: {
     username: 'nonexistent_user_12345',
     password: 'wrong_password',
+  },
+  empty: {
+    username: '',
+    password: '',
   },
 } satisfies Record<string, UserCredentials>;
 
@@ -29,4 +33,19 @@ export function assertCredentials(): UserCredentials {
   }
 
   return { username, password };
+}
+
+export function createValidBooking(overrides: Partial<BookingPayload> = {}): BookingPayload {
+  return {
+    firstname: 'QA',
+    lastname: 'Automation',
+    totalprice: 150,
+    depositpaid: true,
+    bookingdates: {
+      checkin: '2026-08-01',
+      checkout: '2026-08-05',
+    },
+    additionalneeds: 'Breakfast',
+    ...overrides,
+  };
 }

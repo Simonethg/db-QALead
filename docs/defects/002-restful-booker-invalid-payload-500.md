@@ -60,4 +60,4 @@ The API returns `500 Internal Server Error`. A server-side stack trace is expose
 
 ## Status
 
-Open — current test suite documents the behavior with a `404` not-found test as the negative case. This defect should be retested once the API is fixed.
+Open — covered by `tests/api/booking.spec.ts` (`should reject an invalid booking payload with a non-success status`), which asserts the current `500` and documents the preferred `400` once the API is fixed.

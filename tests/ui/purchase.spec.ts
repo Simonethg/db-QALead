@@ -3,7 +3,6 @@ import { assertCredentials, orderDetails } from '../../src/fixtures/test-data';
 
 test.describe('Purchase flow', () => {
   test('should add a product to the cart and complete a purchase', async ({
-    page,
     loginPage,
     homePage,
     productPage,
@@ -20,7 +19,6 @@ test.describe('Purchase flow', () => {
     await homePage.selectFirstProduct();
     const productTitle = await productPage.getProductTitle();
 
-    page.once('dialog', (dialog) => dialog.accept());
     await productPage.addToCart();
 
     // Act: go to cart and place order

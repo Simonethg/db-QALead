@@ -113,14 +113,21 @@ npm run typecheck     # TypeScript type check
 ### UI tests
 
 - `login.spec.ts` — logs in with valid credentials and verifies the welcome message.
+- `login-negative.spec.ts` — invalid credentials and empty credentials (negative/edge cases).
+- `logout.spec.ts` — logs out and restores guest navigation.
+- `catalog.spec.ts` — filters the product grid by category (Laptops).
+- `cart.spec.ts` — adds a product to the cart and removes it.
 - `purchase.spec.ts` — adds a product to the cart and completes the checkout flow.
-- `login-negative.spec.ts` — attempts login with invalid credentials and verifies the error handling.
-- `accessibility.spec.ts` — scans the login modal for WCAG 2.1 AA violations using axe-core.
+- `accessibility.spec.ts` — axe-core WCAG 2.1 AA scans scoped to the login modal and the cart region.
 
 ### API tests
 
-- `booking.spec.ts` — creates and retrieves a booking (happy path) and validates error handling for invalid payloads.
+- `auth.spec.ts` — authentication happy path (token issued) and invalid credentials.
+- `booking.spec.ts` — create/retrieve, update, delete-then-404, missing resource 404, and invalid payload (documents DEF-002 / HTTP 500).
 
+### Negative and edge cases (justification)
+
+Invalid login is covered because authentication is a high-risk control: a wrong password must fail closed and must not expose a session. Empty credentials check client-side validation messaging. The invalid booking payload asserts the current non-success status and records the preferred `400` once the API is fixed.
 ## Design decisions
 
 - **Page Object Model:** keeps selectors and page actions separate from test logic, making tests readable and maintenance easier.
@@ -157,8 +164,8 @@ Each report includes severity, steps to reproduce, expected vs. actual behavior,
 
 ## What I would do next with more time
 
-- Add contract tests or schema validation for RESTful Booker responses.
-- Expand accessibility coverage to the cart and product detail pages.
+- Add contract tests or schema validation for RESTful Booker responses (beyond the current status assertions).
+- Expand accessibility coverage to the product detail page and checkout modal.
 - Add fixtures that seed and reset test data in a dedicated environment.
 - Integrate test results with a test case management tool and Slack notifications.
 - Add mutation testing or property-based tests for the billing engine once Meridian APIs are available.

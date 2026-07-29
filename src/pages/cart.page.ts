@@ -55,4 +55,15 @@ export class CartPage extends BasePage {
   async getCartItemCount(): Promise<number> {
     return await this.cartItems.count();
   }
+
+  async removeFirstItem(): Promise<void> {
+    const deleteLink = this.cartItems.first().locator('a', { hasText: 'Delete' });
+    await deleteLink.click();
+  }
+
+  async waitForEmptyCart(): Promise<void> {
+    await this.page.waitForFunction(() => {
+      return document.querySelectorAll('#tbodyid tr').length === 0;
+    });
+  }
 }

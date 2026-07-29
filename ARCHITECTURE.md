@@ -37,9 +37,14 @@ db-QALead/
 ├── tests/
 │   ├── ui/
 │   │   ├── login.spec.ts
+│   │   ├── login-negative.spec.ts
+│   │   ├── logout.spec.ts
+│   │   ├── catalog.spec.ts
+│   │   ├── cart.spec.ts
 │   │   ├── purchase.spec.ts
 │   │   └── accessibility.spec.ts
 │   └── api/
+│       ├── auth.spec.ts
 │       └── booking.spec.ts
 ├── .env.example
 ├── .gitignore

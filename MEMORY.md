@@ -34,3 +34,5 @@
 - [x] GitHub secrets `DEMOBLAZE_USERNAME` and `DEMOBLAZE_PASSWORD` configured.
 - [x] Defect reports published as GitHub issues #1 and #2.
 - [x] CI workflow passed in GitHub Actions after configuring secrets.
+- [x] Test coverage expanded to 16 passing tests (7 API + 9 UI): auth, update/delete booking, invalid payload (DEF-002), logout, catalog filter, cart add/remove, empty login, cart a11y scan.
+- [ ] Human exports final PDFs in Notion: strategy (≤4 pages), scenarios, AI usage log (≤1 page).
