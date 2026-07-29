@@ -15,6 +15,13 @@
 - Submission must demonstrate awareness of SOC 2 Type II evidence/traceability, ISTQB-aligned practices,
   and ADA/WCAG accessibility compliance.
 
+## VERIFIED (session 2026-07-29)
+
+- Skill `i-have-adhd` (ayghri/i-have-adhd) installed for Cursor via `npx skills add`.
+- Paths: `.agents/skills/i-have-adhd/`, `.cursor/skills/i-have-adhd/`, lock in `skills-lock.json`.
+- Always-on rule: `.cursor/rules/i-have-adhd.mdc` (`alwaysApply: true`).
+- Claude Code marketplace command does not apply here; Cursor uses Agent Skills path.
+
 ## OPEN
 
 - [x] Target API: RESTful Booker.
