@@ -15,8 +15,9 @@ Closed-loop multi-agent setup (see `AGENTS.md` and `docs/ai-usage-log.md`):
 - Repository inspection and cloning.
 - Extraction of text from the challenge PDF.
 - Design of agent roles, loop methodology, and context files (`VISION.md`, `ARCHITECTURE.md`, `RULES.md`, `MEMORY.md`).
-- Drafting of this log and the submission-ready `docs/ai-usage-log.md`.
-- Drafting of optional `docs/walkthrough.md` speaking outline.
+- Drafting of strategy, scenarios, defect reports, README, and this log.
+- Drafting of the submission-ready `docs/ai-usage-log.md`.
+- Drafting of optional walkthrough (`docs/walkthrough.md`, Deliverable 5).
 
 ## What was kept human
 
@@ -38,7 +39,7 @@ Closed-loop multi-agent setup (see `AGENTS.md` and `docs/ai-usage-log.md`):
 - Repo inspected with `ls`, `git log`, `git branch`, and `Read`.
 - Plan reviewed by human before approval.
 - Initial test run revealed TypeScript module-resolution issues, missing `OrderDetails` type, UI tests not navigating to base URL, real Demoblaze accessibility violations, and a RESTful Booker endpoint returning 500 instead of 400. Each issue was diagnosed from command output and fixed iteratively.
-- Final verification: `npm run lint`, `npm run typecheck`, `npm run format:check`, and `npm test` all pass. Six tests pass (2 API + 4 UI).
+- Final verification: `npm run lint`, `npm run typecheck`, `npm run format:check`, and `npm test` all pass. Sixteen tests pass (7 API + 9 UI) after coverage expansion.
 - Independent Verifier subagent reviewed the runnable project against `VISION.md`; its findings (package-lock.json ignored, traces not uploaded) were fixed by unignoring the lockfile and adding `test-results/` to CI artifact upload.
 
 ## Cases where AI output was corrected or incomplete

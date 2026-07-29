@@ -30,4 +30,9 @@ export abstract class BasePage {
   async isLoggedIn(): Promise<boolean> {
     return await this.welcomeMessage.isVisible();
   }
+
+  async logout(): Promise<void> {
+    await this.logoutLink.click();
+    await this.loginLink.waitFor({ state: 'visible' });
+  }
 }

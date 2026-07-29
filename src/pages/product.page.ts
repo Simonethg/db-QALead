@@ -14,7 +14,10 @@ export class ProductPage extends BasePage {
   }
 
   async addToCart(): Promise<void> {
+    const dialogPromise = this.page.waitForEvent('dialog');
     await this.addToCartButton.click();
+    const dialog = await dialogPromise;
+    await dialog.accept();
   }
 
   async getProductTitle(): Promise<string> {
