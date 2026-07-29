@@ -9,7 +9,7 @@ It demonstrates a Playwright + TypeScript automation framework against [Demoblaz
 ```
 db-QALead/
 ├── .github/workflows/test.yml    # CI workflow
-├── docs/                         # Strategy doc, scenarios, AI usage log (PDFs), defect reports
+├── docs/                         # Strategy, scenarios, AI usage log, walkthrough, defect reports
 ├── src/
 │   ├── config/                   # Environment configuration
 │   ├── fixtures/                 # Test data and Playwright fixtures
@@ -128,6 +128,11 @@ npm run typecheck     # TypeScript type check
 ### Negative and edge cases (justification)
 
 Invalid login is covered because authentication is a high-risk control: a wrong password must fail closed and must not expose a session. Empty credentials check client-side validation messaging. The invalid booking payload asserts the current non-success status and records the preferred `400` once the API is fixed.
+
+## Optional walkthrough
+
+A speaking script for an 8–10 minute live or recorded demo is in `docs/walkthrough.md` (Deliverable 5). It covers strategy, architecture, running the 16-test suite (or CI evidence), AI usage boundaries, scenarios, and a day-of checklist.
+
 ## Design decisions
 
 - **Page Object Model:** keeps selectors and page actions separate from test logic, making tests readable and maintenance easier.

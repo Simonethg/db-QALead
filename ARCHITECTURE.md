@@ -18,7 +18,7 @@ db-QALead/
 ├── .github/
 │   └── workflows/
 │       └── test.yml              # CI workflow
-├── docs/                         # Deliverable PDFs
+├── docs/                         # Deliverable Markdown drafts / PDFs, defects, walkthrough
 ├── src/
 │   ├── config/
 │   │   └── environments.ts       # Environment URLs and settings
