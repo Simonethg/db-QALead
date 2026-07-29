@@ -101,11 +101,11 @@ The rule is simple: automate what is high-risk, repeatable, and stable; explore 
 
 **Merge policy (ship / show / ask).** PRs are classified by risk so that low-risk changes move fast and high-risk changes get human eyes.
 
-| Etiqueta | Requiere | Cuándo mergea |
-|----------|----------|---------------|
-| `ssa: ship` | CI verde + Greptile 5/5 | inmediato, sin revisión humana |
-| `ssa: show` | CI verde + Greptile 5/5 | tras ventana de objeción de 24 h |
-| `ssa: ask` | CI + 5/5 + aprobación humana | cuando alguien aprueba |
+| Label | Requirement | Merge condition |
+|-------|-------------|-----------------|
+| `ssa: ship` | Green CI + Greptile 5/5 | Immediately, no human review required |
+| `ssa: show` | Green CI + Greptile 5/5 | After a 24-hour objection window |
+| `ssa: ask` | Green CI + Greptile 5/5 + human approval | When someone approves |
 
 The author applies the label based on a short risk checklist: touches billing/payments/auth (`ask`), changes a shared library or critical path (`show`), everything else (`ship`). Greptile scores code review confidence; a 5/5 means automated review found no concerns. For SOC 2, every merge is attributed to a user and linked to a PR, and `ship` merges are audited monthly to confirm the risk checklist was applied correctly.
 
