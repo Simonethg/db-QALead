@@ -11,7 +11,8 @@
 - Repository inspection and cloning.
 - Extraction of text from the challenge PDF.
 - Design of agent roles, loop methodology, and context files (`VISION.md`, `ARCHITECTURE.md`, `RULES.md`, `MEMORY.md`).
-- Drafting of this log.
+- Drafting of this log and the submission-ready `docs/ai-usage-log.md`.
+- Drafting of optional `docs/walkthrough.md` speaking outline.
 
 ## What was kept human
 
