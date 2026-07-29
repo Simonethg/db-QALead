@@ -25,6 +25,7 @@
 - Code and documentation pushed to `https://github.com/Simonethg/db-QALead` with explicit user approval; `.env` was excluded from the commit.
 - GitHub secrets `DEMOBLAZE_USERNAME` and `DEMOBLAZE_PASSWORD` added via `gh secret set` after user granted `gh` access.
 - Defect reports published as GitHub issues #1 and #2 via `gh issue create`.
+- CI workflow `QA Automation Suite` passed in GitHub Actions after secrets were configured (run 30414309392).
 
 ## Verification performed
 

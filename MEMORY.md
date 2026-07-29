@@ -33,3 +33,4 @@
 - [x] Project pushed to GitHub.
 - [x] GitHub secrets `DEMOBLAZE_USERNAME` and `DEMOBLAZE_PASSWORD` configured.
 - [x] Defect reports published as GitHub issues #1 and #2.
+- [x] CI workflow passed in GitHub Actions after configuring secrets.
