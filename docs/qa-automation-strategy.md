@@ -31,6 +31,7 @@ Risks are ranked by business impact, probability of escape, and detectability. T
 | Accessibility | axe-core | WCAG 2.1 AA scanning in CI. |
 | CI/CD | GitHub Actions | Existing platform; keeps quality gates close to the code. |
 | Reporting | Playwright HTML + Allure (optional) | Readable failures and historical trends. |
+| Automated code review | Greptile | Scales human review and provides a confidence score for ship/show/ask decisions. |
 | Test data | Factory functions + seed APIs | Fast, deterministic setup per test. |
 
 **What was evaluated**
@@ -38,6 +39,8 @@ Risks are ranked by business impact, probability of escape, and detectability. T
 - **Cypress:** Excellent DX, but weaker multi-tab, multi-origin, and API support than Playwright. Its component testing is stronger, but Meridian needs full-stack coverage more.
 - **Selenium/WebDriver:** Too slow and flaky for a team without QA maturity.
 - **Playwright:** Best fit because it handles UI, API, and accessibility in one runtime, has automatic waiting, and integrates cleanly with TypeScript and GitHub Actions.
+
+**Why Greptile for code review.** With twelve engineers and no dedicated QA yet, every PR cannot wait for a senior human reviewer. Greptile provides an automated first-pass review with a confidence score that supports the ship/show/ask merge policy. It catches common issues (security patterns, test coverage drift, anti-patterns) and frees humans to focus on architecture and business-risk decisions. It also creates an auditable review record for SOC 2. The score is not a replacement for human judgment on high-risk changes (`ssa: ask`), but it makes low-risk changes (`ssa: ship`) safe to merge without bottlenecks.
 
 **Strongest argument against the choice:** Playwright's rapid release cadence requires keeping browsers and dependencies in sync. This is manageable with a lockfile and scheduled updates.
 
